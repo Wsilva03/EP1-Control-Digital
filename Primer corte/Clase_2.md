@@ -48,6 +48,37 @@ Las ecuaciones en diferencias se pueden resolver mediante métodos iterativos o 
 >Métodos Iterativos: Técnica para encontrar soluciones numéricas mediante repetidas aproximaciones.<br>
 >Transformada Z: Herramienta matemática que convierte ecuaciones en diferencias en expresiones algebraicas en el dominio Z.
 
+### Ejemplo:
+
+Supongamos la siguiente ecuación en diferencias:
+
+$$y(k)−0.5y(k−1)=u(k)+0.25u(k−1)$$
+Condiciones iniciales:
+
+- $y(−1)=1$
+- $u(k)=1$ para $k≥0$
+
+**Paso 1: Aplicar la Transformada Z**
+
+Aplicamos la Transformada Z a ambos lados de la ecuación. Recordando que la Transformada Z de $y(k−1)$ es 
+$Z^{-1} Y(z)$ y de $u(k−1)$ es $z^{−1}U(z)$, obtenemos:
+
+$$Y(z) - 0.5z^{-1}Y(z) = U(z) + 0.25z^{-1}U(z)$$
+
+**Paso 2: Despejar la Salida Y(z)**
+
+Reorganizamos la ecuación para despejar Y(z):
+
+$Y(z): Y(z)(1 - 0.5z^{-1}) = U(z)(1 + 0.25z^{-1})$
+
+$Y(z) = \frac{1 + 0.25z^{-1}}{1 - 0.5z^{-1}}U(z)$
+
+**Paso 3: Aplicar la Transformada Z Inversa**
+
+Finalmente, aplicamos la Transformada Z inversa para encontrar y(k):
+
+La expresión anterior se puede expandir en serie de potencias de z⁻¹ si es necesario, pero en este caso, ya hemos despejado $Y(z)$ en términos de $U(z)$. Si $U(k) = 1$ para todo k, la respuesta $y(k)$ se obtiene utilizando tablas de Transformada Z inversa o métodos algebraicos específicos.
+
 
 # 4. Transformada Z
 
@@ -77,13 +108,33 @@ La función de transferencia en el dominio Z describe la relación entre la entr
 
 $$H(z)=\frac{Y(z)}{X(z)}$$
 
+### Ejemplo:
+
+Consideremos una ecuación en diferencias dada por:
+$$2y(k+1) - 3y(k) + y(k-1) = 4u(k+1) - u(k)$$
+
+**Paso 1: Aplicar la Transformada Z**
+
+$2zY(z) - 3Y(z) + z^{-1}Y(z) = 4zU(z) - U(z)$
+
+**Paso 2: Despejar la Función de Transferencia H(z)**
+
+$(2z - 3 + z^{-1})Y(z) = (4z - 1)U(z)$
+
+La función de transferencia H(z) es:
+$H(z) = \frac{Y(z)}{U(z)} = \frac{4z-1}{2z^{2}-3z+1}$
+
+**Paso 3: Interpretar la Función de Transferencia**
+
+Esta función de transferencia describe cómo la entrada U(z) se transforma en la salida Y(z) en el dominio Z. La expresión se puede analizar para determinar la estabilidad y el comportamiento dinámico del sistema, evaluando los polos y ceros de H(z)
+
 # 7. Sistemas Causales y No Causales
 
 Se aborda la diferencia entre sistemas causales y no causales, donde la causalidad es esencial para determinar si un sistema responde a entradas pasadas o futuras.
 
-Sistema Causal: Responde solo a entradas presentes y pasadas, donde el grado del numerador es menor o igual al del denominador.
+- **Sistema Causal:** Responde solo a entradas presentes y pasadas, donde el grado del numerador es menor o igual al del denominador.
 $$G(z)=\frac{N(z)}{D(z)}$$
-Sistema No Causal: Puede responder a entradas futuras, ocurre si el sistema responde sin ninguna entrada aplicada previamente.
+- **Sistema No Causal:** Puede responder a entradas futuras, ocurre si el sistema responde sin ninguna entrada aplicada previamente.
 
 # 8. Tiempo Muerto en Sistemas Discretos
 
