@@ -1,3 +1,3 @@
-# EP1-Control-Digital
--Juan Esteban Sanchez Lamprea 66192
--Wendy Dayan Silva Venegas 66934
+<h1 align="center"> EP1-Control-Digital </h1>
+- Juan Esteban Sanchez Lamprea 66192<br>
+- Wendy Dayan Silva Venegas 66934
