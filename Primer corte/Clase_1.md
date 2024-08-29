@@ -35,19 +35,43 @@ Es el proceso de transformar una señal continua y variable en el tiempo (analó
 ## 3. Conversión Digital a Análoga (D/A)
 
 Es el proceso inverso a la conversión analógica a digital. Consiste en transformar una señal digital, representada por una secuencia de números binarios (ceros y unos), en una señal analógica continua. Esto se logra mediante un conversor digital-analógico (CDA), el cual asigna a cada valor digital un nivel de tensión o corriente específico. A continuación, se generan muestras de la señal analógica utilizando estos niveles, y mediante técnicas de interpolación se obtiene una señal analógica continua. 
+- Ejemplo de Resolución en Conversión D/A:
+
+| Bits (Entrada) | Resolución (V) | Resolución (%FS) |
+|----------------|----------------|------------------|
+| 4              | 1              | 6,6              |
+| 8              | 0.059          | 0,4              |
+| 16             | 229 x 10^-6    | 0,0015           |
+| 32             | 3.5 x 10^-9    | 0,00000000023    |
+
 
 ### Metodos de conversión:
 
  - **Resistores ponderados:** Es más sencillo pero menos preciso, las formulas que se usan son las siguientes:
     
-    $$E_o =−Rf(\frac{Va}{R} + (\frac{Vb}{2R}) + (\frac{Vc}{4R})$$<br>
-    $$E_o = \frac{R_f E_r}{R}$$ <br>
-    $$V_o = - \left(X_1 \frac{R}{2R} +X_2 \frac{R}{4R} +X_3 \frac{R}{8R} + X_4\frac{R}{16R} \right)*E$$ <br>
+$$E_o =−Rf(\frac{Va}{R} + (\frac{Vb}{2R}) + (\frac{Vc}{4R})$$ <br>
+$$E_o = \frac{R_f E_r}{R}$$ <br>
+$$V_o = - \left(X_1 \frac{R}{2R} +X_2 \frac{R}{4R} +X_3 \frac{R}{8R} + X_4\frac{R}{16R} \right)*E$$ <br>
 
  - **Red escalera R-2R:** Es más complejo, pero ofrece mayor precisión, las formulas que se usan son las siguientes:
-  $$V_o = -\left(\frac{R_f}{R}\right)\left(\frac{V_0}{16} + \frac{V_1}{8} + \frac{V_2}{4} + \frac{V_3}{2}\right)$$ <br>
+$$V_o = -\left(\frac{R_f}{R}\right)\left(\frac{V_0}{16} + \frac{V_1}{8} + \frac{V_2}{4} + \frac{V_3}{2}\right)$$ <br>
 
 $$V_o = -\left(\frac{R_f V_{ref}}{R}\right)\left(\frac{B_0}{16} + \frac{B_1}{8} + \frac{B_2}{4} + \frac{B_3}{2}\right)$$ <br>
+
+## 4. Modelos Matemáticos de Conversores
+
+- **Modelo para A/D y D/A:** Los conversores se modelan utilizando un retenedor y un muestreador, que se representan mediante funciones de transferencia.
+- **Zero Order Hold (ZOH):** Mantiene la salida constante durante un periodo de muestreo.
+
+## 5. Conclusiones
+
+El control digital es un campo crucial en la ingeniería moderna, permitiendo la integración de sistemas digitales en el control de procesos analógicos. La correcta comprensión y aplicación de la conversión entre señales digitales y analógicas es fundamental para el diseño de sistemas de control eficientes. La elección de los métodos de conversión y la correcta implementación de los modelos matemáticos juegan un papel determinante en la precisión y eficacia del control digital.
+
+## 6. Referencias
+
+1. Cote, J.E. Introducción al Control Digital (Presentación). 2024. 
+2. Ogata, Katsuhiko. Sistemas de control en tiempo discreto. Pearson educación, 1996.
+3. Fadali, M. Sami; Visioli, Antonio. Digital control engineering. Analysis and design. Elsevier, 2013.
 
 >
 
