@@ -75,6 +75,7 @@ El control digital es un campo crucial en la ingeniería moderna, permitiendo la
 1. Cote, J.E. Introducción al Control Digital (Presentación). 2024. 
 2. Ogata, Katsuhiko. Sistemas de control en tiempo discreto. Pearson educación, 1996.
 3. Fadali, M. Sami; Visioli, Antonio. Digital control engineering. Analysis and design. Elsevier, 2013.
+4. SoundGirls. Figura 3: Ejemplo de señal digital y analógica. Recuperado de soundgirls.org.
 
 >
 
