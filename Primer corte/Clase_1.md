@@ -50,13 +50,13 @@ Es el proceso inverso a la conversión analógica a digital. Consiste en transfo
  - **Resistores ponderados:** Es más sencillo pero menos preciso, las formulas que se usan son las siguientes:
     
 $$E_o =−Rf(\frac{Va}{R} + (\frac{Vb}{2R}) + (\frac{Vc}{4R})$$ <br>
-$$E_o = \frac{R_f E_r}{R}$$ <br>
-$$V_o = - \left(X_1 \frac{R}{2R} +X_2 \frac{R}{4R} +X_3 \frac{R}{8R} + X_4\frac{R}{16R} \right)*E$$ <br>
+$$E_o = \frac{R_f E_r}{R}$$
+$$V_o = - \left(X_1 \frac{R}{2R} +X_2 \frac{R}{4R} +X_3 \frac{R}{8R} + X_4\frac{R}{16R} \right)*E$$
 
  - **Red escalera R-2R:** Es más complejo, pero ofrece mayor precisión, las formulas que se usan son las siguientes:
-$$V_o = -\left(\frac{R_f}{R}\right)\left(\frac{V_0}{16} + \frac{V_1}{8} + \frac{V_2}{4} + \frac{V_3}{2}\right)$$ <br>
+$$V_o = -\left(\frac{R_f}{R}\right)\left(\frac{V_0}{16} + \frac{V_1}{8} + \frac{V_2}{4} + \frac{V_3}{2}\right)$$
 
-$$V_o = -\left(\frac{R_f V_{ref}}{R}\right)\left(\frac{B_0}{16} + \frac{B_1}{8} + \frac{B_2}{4} + \frac{B_3}{2}\right)$$ <br>
+$$V_o = -\left(\frac{R_f V_{ref}}{R}\right)\left(\frac{B_0}{16} + \frac{B_1}{8} + \frac{B_2}{4} + \frac{B_3}{2}\right)$$
 
 ## 4. Modelos Matemáticos de Conversores
 
