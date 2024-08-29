@@ -108,7 +108,7 @@ La discretización de controladores es un proceso esencial para implementar cont
 
 # 10. Referencias
 
-1. Cote, J.E. Transformada Z de adelantos y atrasos (Presentación). 2024. 
+1. Cote, J.E. Discretización de Controladores (Presentación). 2024. 
 2. Ramos, G. Material curso Control Digital. Universidad Nacional de Colombia, 2015.
 3. Barrero Mendoza, Oscar. Sistemas de control digital. Universidad de Ibagué, 2021.
 
