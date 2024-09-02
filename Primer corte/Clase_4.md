@@ -87,7 +87,9 @@ Paso 3: Segunda fila del arreglo de Jury
 El cálculo de los términos para la segunda fila se realiza de la siguiente manera:
 
 $$b0 =−0.2⋅1−(−0.2)⋅(−0.2)=−0.2+0.04=−0.16$$
+
 $$b1 =−0.2⋅(−1.5)−0.8⋅(−0.2)=0.3+0.16=0.46$$
+
 $$b2 =−0.2⋅0.8−(−1.5)⋅(−0.2)=−0.16−0.3=−0.46$$
 
 La segunda fila del arreglo es:
