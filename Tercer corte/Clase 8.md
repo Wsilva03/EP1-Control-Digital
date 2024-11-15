@@ -98,9 +98,25 @@ $$y(k) = \begin{bmatrix} b_n & b_{n-1} & \dots & b_1 \end{bmatrix} \mathbf{X}(k)
 
 La forma canónica observable es otra estructura común en espacio de estados, representada así:
 
-$$\mathbf{X}(k+1) = \begin{bmatrix} 0 & 0 & \dots & -a_n \\ 1 & 0 & \dots & -a_{n-1} \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & -a_1 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} b_n \\ b_{n-1} \\ \vdots \\ b_1 \end{bmatrix} u(k)$$
+$$
+X(k+1) = \begin{bmatrix}
+0 & 1 & 0 & \cdots & 0 \\
+0 & 0 & 1 & \cdots & 0 \\
+\vdots & \vdots & \vdots & \ddots & \vdots \\
+-a_n & -a_{n-1} & -a_{n-2} & \cdots & -a_1
+\end{bmatrix} X(k) + \begin{bmatrix}
+0 \\
+0 \\
+\vdots \\
+1
+\end{bmatrix} u(k)
+$$
 
-$$y(k) = \begin{bmatrix} 0 & 0 & \dots & 1 \end{bmatrix} \mathbf{X}(k)$$
+$$
+y(k) = \begin{bmatrix}
+b_n & b_{n-1} & \cdots & b_1
+\end{bmatrix} X(k)
+$$
 
 > 🔑 **_Forma Canónica Observable:_** Representación en la que cada estado puede ser observado directamente desde la salida.
 
