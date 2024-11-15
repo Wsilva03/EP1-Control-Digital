@@ -56,18 +56,12 @@ Para construir un modelo en espacio de estados a partir de una ecuación diferen
 ## 5. Ejemplo Básico de Representación en Espacio de Estados
 
 Considerando el sistema mecánico:
-$$
-M \ddot{y}(t) + B \dot{y}(t) + Ky(t) = u(t)
-$$
+$$M\ddot{y}(t) + B\dot{y}(t) + Ky(t) = u(t)$$
 
 Las ecuaciones de estado se representan como:
 
-$$
-\mathbf{X}(k+1) = \begin{bmatrix} 0 & 1 \\ -\frac{K}{M} & -\frac{B}{M} \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 0 \\ \frac{1}{M} \end{bmatrix} u(k)
-$$
-$$
-y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \mathbf{X}(k)
-$$
+$$\mathbf{X}(k+1) = \begin{bmatrix} 0 & 1 \\ -\frac{K}{M} & -\frac{B}{M} \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 0 \\ \frac{1}{M} \end{bmatrix} u(k)$$
+$$y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \mathbf{X}(k)$$
 
 Donde $\mathbf{X}(k)$ representa el vector de estado compuesto por la posición y la velocidad.
 
