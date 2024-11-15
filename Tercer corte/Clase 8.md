@@ -321,7 +321,7 @@ Convierte esta función de transferencia a espacio de estados en forma canónica
 
 3. **Escribir el sistema en forma matricial**:
    
-   $$
+$$
 \begin{bmatrix}
 x_1(k+1) \\
 x_2(k+1)
