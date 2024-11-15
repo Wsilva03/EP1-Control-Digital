@@ -321,11 +321,37 @@ Convierte esta función de transferencia a espacio de estados en forma canónica
 
 3. **Escribir el sistema en forma matricial**:
    
-   $$\mathbf{X}(k+1) = \begin{bmatrix} -2 & 1 \\ 0 & -3 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 1 \\ 0 \end{bmatrix} u(k)$$
-
-   La salida es:
-   
-   $$y(k) = \begin{bmatrix} 2 & 0 \end{bmatrix} \mathbf{X}(k)$$
+   $$
+\begin{bmatrix}
+x_1(k+1) \\
+x_2(k+1)
+\end{bmatrix}
+=
+\begin{bmatrix}
+0.8 & 1 \\
+0 & 0.3
+\end{bmatrix}
+\begin{bmatrix}
+x_1(k) \\
+x_2(k)
+\end{bmatrix}
++
+\begin{bmatrix}
+0 \\
+1
+\end{bmatrix}
+u(k)
+$$
+La salida es: 
+$$
+y(k) = \begin{bmatrix}
+1 & 0
+\end{bmatrix}
+\begin{bmatrix}
+x_1(k) \\
+x_2(k)
+\end{bmatrix}
+$$
 
 **Conclusión**: La representación en espacio de estados en forma canónica observable es:
 
