@@ -246,8 +246,7 @@ Obtén la representación en espacio de estados en la forma canónica controlabl
 
 3. **Escribir el sistema en forma matricial**:
    
-$$
-\begin{bmatrix}
+$$\begin{bmatrix}
 x_1(k+1) \\
 x_2(k+1)
 \end{bmatrix}
@@ -265,8 +264,7 @@ x_2(k)
 0 \\
 1
 \end{bmatrix}
-u(k)
-$$
+u(k)$$
 
 La salida es:
 
