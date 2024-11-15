@@ -246,6 +246,7 @@ Obtén la representación en espacio de estados en la forma canónica controlabl
 
 3. **Escribir el sistema en forma matricial**:
    
+   
 $$\begin{bmatrix}
 x_1(k+1) \\
 x_2(k+1)
