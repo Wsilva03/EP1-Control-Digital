@@ -244,7 +244,8 @@ Obtén la representación en espacio de estados en la forma canónica controlabl
    x_2[k+1] = -0.3x_2[k] + u[k]
    $$
 
-3. **Escribir el sistema en forma matricial**:
+3. **Escribir el sistema en forma matricial**: 
+   
     $$
     \begin{bmatrix}
     x_1(k+1) \\
