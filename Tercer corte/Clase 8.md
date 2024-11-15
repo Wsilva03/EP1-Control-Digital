@@ -458,3 +458,8 @@ Encuentra los polos del sistema en espacio de estados.
 - El espacio de estados permite representar la función de transferencia en diferentes formas estructuradas, útiles para el análisis y control de sistemas.
 - La sintonización de controladores PID en procesos industriales varía según el tipo de proceso (autorregulado o integrante).
 - Elegir el método adecuado para la sintonización de controladores es fundamental para optimizar el rendimiento del sistema de control, garantizando estabilidad y robustez.
+
+## Referencias
+- Cote, J.E. 8. Intro Espacio de estados (Presentación). 2024. 
+- Franklin, G. F., Powell, J. D., & Emami-Naeini, A. (2015). Feedback Control of Dynamic Systems. Pearson.
+- Ogata, K. (2009). Modern Control Engineering. Prentice Hall.

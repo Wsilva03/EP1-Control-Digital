@@ -147,3 +147,9 @@ Implementa un observador en Simulink y grafica la evolución del error de estima
 | Error de estimación | Gráfica en Simulink |
 
 ---
+
+## Referencias
+
+- Cote, J.E. 8. Observadores de estados (Presentación). 2024. 
+- Ogata, K. (2010). Discrete-Time Control Systems. Pearson. Profundiza en análisis y diseño de sistemas de control discreto.
+- Franklin, G., Powell, J., & Workman, M. (1997). Digital Control of Dynamic Systems. Addison-Wesley. Ideal para estrategias de control digital, como controladores discretos y diseño de sistemas.

@@ -242,6 +242,12 @@ calcula las ganancias de retroalimentación para ubicar los polos en $z = -0.5$.
 
 ---
 
+## Referencias
+
+- Cote, J.E. 8. Control por retroalimentación de estados (Presentación). 2024. 
+- Dorf, R. C., & Bishop, R. H. (2010). Modern Control Systems. Pearson. Este libro es un recurso extenso sobre control digital, ideal para fundamentos y aplicaciones avanzadas.
+- Kuo, B. C., & Golnaraghi, F. (2002). Automatic Control Systems. Wiley. Este texto proporciona una base sólida en teoría de control, incluyendo control digital y retroalimentación.
+
 
 
 
