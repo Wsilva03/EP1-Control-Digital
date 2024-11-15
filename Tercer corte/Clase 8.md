@@ -20,12 +20,8 @@ En un sistema, se tienen las siguientes variables y ecuaciones:
 
 Las ecuaciones de estado y de salida se representan como:
 
-$$
-\mathbf{X}(k+1) = \mathbf{A} \mathbf{X}(k) + \mathbf{B} \mathbf{u}(k)
-$$
-$$
-\mathbf{y}(k) = \mathbf{C} \mathbf{X}(k) + \mathbf{D} \mathbf{u}(k)
-$$
+$$\mathbf{X}(k+1) = \mathbf{A} \mathbf{X}(k) + \mathbf{B} \mathbf{u}(k)$$
+$$\mathbf{y}(k) = \mathbf{C} \mathbf{X}(k) + \mathbf{D} \mathbf{u}(k)$$
 
 Donde:
 - **A** es la matriz de estados.
@@ -77,9 +73,7 @@ En el control multivariable, el espacio de estados permite representar una funci
 
 Una función de transferencia genérica se puede expresar como:
 
-$$
-G(z) = \frac{b_0 z^n + b_1 z^{n-1} + \dots + b_{n-1} z + b_n}{z^n + a_1 z^{n-1} + \dots + a_{n-1} z + a_n}
-$$
+$$G(z) = \frac{b_0 z^n + b_1 z^{n-1} + \dots + b_{n-1} z + b_n}{z^n + a_1 z^{n-1} + \dots + a_{n-1} z + a_n}$$
 
 Esta función se puede representar en distintas formas canónicas dentro del espacio de estados, entre las que destacan:
 - **Forma Canónica Controlable**
@@ -94,13 +88,9 @@ Esta función se puede representar en distintas formas canónicas dentro del esp
 
 Para una función de transferencia $G(z)$, la forma canónica controlable se define mediante la siguiente estructura matricial:
 
-$$
-\mathbf{X}(k+1) = \begin{bmatrix} 0 & 1 & 0 & \dots & 0 \\ 0 & 0 & 1 & \dots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ -a_n & -a_{n-1} & -a_{n-2} & \dots & -a_1 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix} u(k)
-$$
+$$\mathbf{X}(k+1) = \begin{bmatrix} 0 & 1 & 0 & \dots & 0 \\ 0 & 0 & 1 & \dots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ -a_n & -a_{n-1} & -a_{n-2} & \dots & -a_1 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix} u(k)$$
 
-$$
-y(k) = \begin{bmatrix} b_n & b_{n-1} & \dots & b_1 \end{bmatrix} \mathbf{X}(k)
-$$
+$$y(k) = \begin{bmatrix} b_n & b_{n-1} & \dots & b_1 \end{bmatrix} \mathbf{X}(k)$$
 
 > 🔑 **_Forma Canónica Controlable:_** Representación que permite controlar el sistema desde el vector de entrada mediante matrices estructuradas.
 
@@ -108,13 +98,9 @@ $$
 
 La forma canónica observable es otra estructura común en espacio de estados, representada así:
 
-$$
-\mathbf{X}(k+1) = \begin{bmatrix} 0 & 0 & \dots & -a_n \\ 1 & 0 & \dots & -a_{n-1} \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & -a_1 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} b_n \\ b_{n-1} \\ \vdots \\ b_1 \end{bmatrix} u(k)
-$$
+$$\mathbf{X}(k+1) = \begin{bmatrix} 0 & 0 & \dots & -a_n \\ 1 & 0 & \dots & -a_{n-1} \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & -a_1 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} b_n \\ b_{n-1} \\ \vdots \\ b_1 \end{bmatrix} u(k)$$
 
-$$
-y(k) = \begin{bmatrix} 0 & 0 & \dots & 1 \end{bmatrix} \mathbf{X}(k)
-$$
+$$y(k) = \begin{bmatrix} 0 & 0 & \dots & 1 \end{bmatrix} \mathbf{X}(k)$$
 
 > 🔑 **_Forma Canónica Observable:_** Representación en la que cada estado puede ser observado directamente desde la salida.
 
@@ -122,13 +108,9 @@ $$
 
 Cuando los polos de la función de transferencia son diferentes, se puede representar en forma canónica diagonal, como sigue:
 
-$$
-\mathbf{X}(k+1) = \begin{bmatrix} P_1 & 0 & \dots & 0 \\ 0 & P_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & P_n \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 1 \\ 1 \\ \vdots \\ 1 \end{bmatrix} u(k)
-$$
+$$\mathbf{X}(k+1) = \begin{bmatrix} P_1 & 0 & \dots & 0 \\ 0 & P_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & P_n \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 1 \\ 1 \\ \vdots \\ 1 \end{bmatrix} u(k)$$
 
-$$
-y(k) = \begin{bmatrix} c_1 & c_2 & \dots & c_n \end{bmatrix} \mathbf{X}(k)
-$$
+$$y(k) = \begin{bmatrix} c_1 & c_2 & \dots & c_n \end{bmatrix} \mathbf{X}(k)$$
 
 > 🔑 **_Forma Diagonal:_** Estructura donde el sistema se descompone en modos independientes, cada uno con un valor propio específico.
 
@@ -142,22 +124,16 @@ La sintonización de controladores en procesos industriales implica ajustar los 
 
 Un proceso integrante es aquel en el que la variable de proceso (PV) continúa cambiando en respuesta a un cambio en la variable de control (CV) en lazo abierto, moviéndose linealmente, como se muestra en la Figura 9. Esto se modela con la siguiente función de transferencia:
 
-$$
-G_m(s) = \frac{K_m \cdot e^{-s \tau_m}}{s}
-$$
+$$G_m(s) = \frac{K_m \cdot e^{-s \tau_m}}{s}$$
 
 Donde:
 - $K_m$: Ganancia de integración, calculada como:
 
-  $$
-  K_m = \frac{O_2 - O_1}{(I_2 - I_1) \cdot (T_3 - T_2)}
-  $$
+  $$K_m = \frac{O_2 - O_1}{(I_2 - I_1) \cdot (T_3 - T_2)}$$
 
 - $\tau_m$: Tiempo muerto, calculado como:
 
-  $$
-  \tau_m = T_2 - T_1
-  $$
+  $$\tau_m = T_2 - T_1$$
 
 > 🔑 **_Proceso Integrante:_** Un tipo de proceso en el que la variable de proceso cambia continuamente en respuesta a un ajuste en la variable de control.
 
