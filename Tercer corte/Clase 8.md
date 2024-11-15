@@ -309,6 +309,7 @@ Convierte esta función de transferencia a espacio de estados en forma canónica
    G(s) = \frac{2}{(s+1)(s+2)}
    $$
 2. **Definir las ecuaciones de estado**:
+   
    Usamos las siguientes ecuaciones en la forma canónica observable:
    
    $$
@@ -319,6 +320,7 @@ Convierte esta función de transferencia a espacio de estados en forma canónica
    $$
 
 3. **Escribir el sistema en forma matricial**:
+   
    $$\mathbf{X}(k+1) = \begin{bmatrix} -2 & 1 \\ 0 & -3 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 1 \\ 0 \end{bmatrix} u(k)$$
 
    La salida es:
