@@ -14,9 +14,9 @@ El espacio de estados es una representación matemática de los sistemas dinámi
 
 En un sistema, se tienen las siguientes variables y ecuaciones:
 
-- **Entradas**: \( u_1(k), u_2(k), ..., u_r(k) \)
-- **Salidas**: \( y_1(k), y_2(k), ..., y_m(k) \)
-- **Variables de Estado**: \( x_1(k), x_2(k), ..., x_n(k) \)
+- **Entradas**: $u_1(k), u_2(k), ..., u_r(k)$
+- **Salidas**: $y_1(k), y_2(k), ..., y_m(k)$
+- **Variables de Estado**: $x_1(k), x_2(k), ..., x_n(k)$
 
 Las ecuaciones de estado y de salida se representan como:
 
@@ -37,8 +37,8 @@ Donde:
 
 Las ecuaciones en espacio de estados pueden adoptar distintas formas, incluyendo:
 
-- **No lineales**: Cuando las funciones \( f \) y \( g \) no son lineales.
-- **Dependientes del tiempo**: Cuando las funciones \( f \) y \( g \) varían con el tiempo.
+- **No lineales**: Cuando las funciones $f$ y $g$ no son lineales.
+- **Dependientes del tiempo**: Cuando las funciones $f$ y $g$ varían con el tiempo.
 - **Sistemas Multivariable**: El espacio de estados permite representar sistemas con múltiples entradas y salidas (MIMO).
 
 En el caso de sistemas **lineales invariantes en el tiempo (LTI)**, las ecuaciones se simplifican, y los sistemas se representan de forma matricial, con matrices constantes en el tiempo.
@@ -51,7 +51,7 @@ Para construir un modelo en espacio de estados a partir de una ecuación diferen
 
 1. Expresar la ecuación diferencial en términos de variables de estado.
 2. Despejar las ecuaciones de estado y de salida.
-3. Organizar los términos en matrices \( A \), \( B \), \( C \), y \( D \).
+3. Organizar los términos en matrices $A$, $B$, $C$, y $D$.
 
 ## 5. Ejemplo Básico de Representación en Espacio de Estados
 
@@ -69,7 +69,7 @@ $$
 y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \mathbf{X}(k)
 $$
 
-Donde \( \mathbf{X}(k) \) representa el vector de estado compuesto por la posición y la velocidad.
+Donde $\mathbf{X}(k)$ representa el vector de estado compuesto por la posición y la velocidad.
 
 **Conclusión**: El espacio de estados ofrece una forma compacta y completa de modelar sistemas dinámicos, lo que facilita el análisis y diseño de controladores robustos.
 
@@ -98,7 +98,7 @@ Esta función se puede representar en distintas formas canónicas dentro del esp
 
 ### 2.1 Forma Canónica Controlable
 
-Para una función de transferencia \( G(z) \), la forma canónica controlable se define mediante la siguiente estructura matricial:
+Para una función de transferencia $G(z)$, la forma canónica controlable se define mediante la siguiente estructura matricial:
 
 $$
 \mathbf{X}(k+1) = \begin{bmatrix} 0 & 1 & 0 & \dots & 0 \\ 0 & 0 & 1 & \dots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ -a_n & -a_{n-1} & -a_{n-2} & \dots & -a_1 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix} u(k)
@@ -153,13 +153,13 @@ G_m(s) = \frac{K_m \cdot e^{-s \tau_m}}{s}
 $$
 
 Donde:
-- **\( K_m \)**: Ganancia de integración, calculada como:
+- $K_m$: Ganancia de integración, calculada como:
 
   $$
   K_m = \frac{O_2 - O_1}{(I_2 - I_1) \cdot (T_3 - T_2)}
   $$
 
-- **\( \tau_m \)**: Tiempo muerto, calculado como:
+- $\tau_m$: Tiempo muerto, calculado como:
 
   $$
   \tau_m = T_2 - T_1
@@ -169,22 +169,22 @@ Donde:
 
 ## 2. Métodos de Sintonización de Controladores PID
 
-La sintonización de un controlador PID consiste en ajustar los parámetros de ganancia proporcional (\( K_c \)), tiempo integral (\( T_i \)), y tiempo derivativo (\( T_d \)) para lograr un rendimiento de control robusto. Para esto, se debe identificar la dinámica del proceso y seleccionar un método de sintonización adecuado.
+La sintonización de un controlador PID consiste en ajustar los parámetros de ganancia proporcional ($K_c$), tiempo integral ($T_i$), y tiempo derivativo ($T_d$) para lograr un rendimiento de control robusto. Para esto, se debe identificar la dinámica del proceso y seleccionar un método de sintonización adecuado.
 
 ### 2.1 Métodos de Sintonización para Procesos Autorregulados
 
 #### Controlador PI
 
-Para implementar un controlador PI en un proceso autorregulado, los valores de \( K_c \) y \( T_i \) se pueden calcular mediante métodos como los siguientes:
+Para implementar un controlador PI en un proceso autorregulado, los valores de $K_c$ y $T_i$ se pueden calcular mediante métodos como los siguientes:
 
 | Método | K_c | T_i |
 |---|---|---|
-| Chien | $\frac{0.7 T_m}{K_m \tau_m}$ | $2.33 \tau_m$ |
-| Ziegler and Nichols | $\frac{0.9 T_m}{K_m \tau_m}$ | $3.33 \tau_m$ |
-| Callender | $\frac{0.568 T_m}{K_m \tau_m}$ | $3.64 \tau_m$ |
-| Moros | $\frac{0.8 T_m}{K_m \tau_m}$ | $3 \tau_m$ |
-| Reswick | $\frac{0.2}{K_m}$ | $0.2 \tau_m$ |
-| Fertik and Sharpe | $\frac{0.56}{K_m}$ | $0.65 T_m$ |
+| Chien | $\frac{0.7 T_m}{K_m \tau_m}$| $2.33 \tau_m$|
+| Ziegler and Nichols | $\frac{0.9 T_m}{K_m \tau_m}$| $3.33 \tau_m$|
+| Callender | $\frac{0.568 T_m}{K_m \tau_m}$| $3.64 \tau_m$|
+| Moros | $\frac{0.8 T_m}{K_m \tau_m}$| $3 \tau_m$|
+| Reswick | $\frac{0.2}{K_m}$| $0.2 \tau_m$|
+| Fertik and Sharpe | $\frac{0.56}{K_m}$| $0.65 T_m$|
 
 #### Controlador PID
 
@@ -192,11 +192,11 @@ Para un controlador PID en un proceso autorregulado, los parámetros de sintoniz
 
 | Método | K_c | T_i | T_d |
 |---|---|---|---|
-| Chien | $\frac{0.95T_m}{K_m \tau_m}$ | $2.38 \tau_m$ | $0.42 \tau_m$ |
-| Ziegler-Nichols | $a \frac{T_m}{K_m \tau_m}$, donde $a \in [1.2, 2]$ | $2 \tau_m$ | $0.5 \tau_m$ |
-| Callender | $\frac{1.066}{K_m \tau_m}$ | $1.418 \tau_m$ | $0.353 \tau_m$ |
-| Parr | $\frac{1.25 T_m}{K_m \tau_m}$ | $2.5 \tau_m$ | $0.4 \tau_m$ |
-| Moros | $\frac{1.2 T_m}{K_m \tau_m}$ | $2 \tau_m$ | $0.42 \tau_m$ |
+| Chien | $\frac{0.95T_m}{K_m \tau_m}$| $2.38 \tau_m$| $0.42 \tau_m$|
+| Ziegler-Nichols | $a \frac{T_m}{K_m \tau_m}$, donde $a \in [1.2, 2]$| $2 \tau_m$| $0.5 \tau_m$|
+| Callender | $\frac{1.066}{K_m \tau_m}$| $1.418 \tau_m$| $0.353 \tau_m$|
+| Parr | $\frac{1.25 T_m}{K_m \tau_m}$| $2.5 \tau_m$| $0.4 \tau_m$|
+| Moros | $\frac{1.2 T_m}{K_m \tau_m}$| $2 \tau_m$| $0.42 \tau_m$|
 
 > 🔑 **_Sintonización de Controladores:_** Ajuste de parámetros para lograr un control robusto y eficiente, basado en las características del proceso.
 
@@ -208,11 +208,11 @@ En un proceso integrante, un controlador PI se sintoniza utilizando métodos com
 
 | Método | K_c | T_i |
 |---|---|---|
-| Ziegler and Nichols | $\frac{0.9}{K_m \tau_m}$ | $3.33 \tau_m$ |
-| Coon | $\frac{1.0}{K_m \tau_m}$ | $0$ |
-| Åström and Hägglund | $\frac{0.63}{K_m \tau_m}$ | $3.2 \tau_m$ |
-| Hay | $\frac{0.42}{K_m \tau_m}$ | $5.8 \tau_m$ |
-| Skogestad | $\frac{0.404}{K_m \tau_m}$ | $7 \tau_m$ |
+| Ziegler and Nichols | $\frac{0.9}{K_m \tau_m}$| $3.33 \tau_m$|
+| Coon | $\frac{1.0}{K_m \tau_m}$| $0$|
+| Åström and Hägglund | $\frac{0.63}{K_m \tau_m}$| $3.2 \tau_m$|
+| Hay | $\frac{0.42}{K_m \tau_m}$| $5.8 \tau_m$|
+| Skogestad | $\frac{0.404}{K_m \tau_m}$| $7 \tau_m$|
 
 #### Controlador PID
 
@@ -220,11 +220,11 @@ Para sintonizar un controlador PID en un proceso integrante, se utilizan método
 
 | Método | K_c | T_i | T_d |
 |---|---|---|---|
-| Ford | $\frac{1.48}{K_m \tau_m}$ | $2 \tau_m$ | $0.37 \tau_m$ |
-| Hay | $\frac{0.4}{K_m \tau_m}$ | $3.2 \tau_m$ | $0.8 \tau_m$ |
-| Åström and Hägglund | $\frac{0.94}{K_m \tau_m}$ | $2 \tau_m$ | $0.5 \tau_m$ |
-| Leonard | $\frac{0.74}{K_m \tau_m}$ | $12.2 \tau_m$ | $0.41 \tau_m$ |
-| Rotach | $\frac{1.21}{K_m \tau_m}$ | $1.6 \tau_m$ | $0.48 \tau_m$ |
+| Ford | $\frac{1.48}{K_m \tau_m}$| $2 \tau_m$| $0.37 \tau_m$|
+| Hay | $\frac{0.4}{K_m \tau_m}$| $3.2 \tau_m$| $0.8 \tau_m$|
+| Åström and Hägglund | $\frac{0.94}{K_m \tau_m}$| $2 \tau_m$| $0.5 \tau_m$|
+| Leonard | $\frac{0.74}{K_m \tau_m}$| $12.2 \tau_m$| $0.41 \tau_m$|
+| Rotach | $\frac{1.21}{K_m \tau_m}$| $1.6 \tau_m$| $0.48 \tau_m$|
 
 > 🔑 **_Métodos de Sintonización:_** Métodos específicos de cálculo para ajustar los controladores PI y PID según las características del proceso, ya sea autorregulado o integrante.
 
@@ -248,7 +248,7 @@ Obtén la representación en espacio de estados en la forma canónica controlabl
 **Solución**:
 
 1. **Definir las variables de estado**:
-   Definimos \( x_1[k] = y[k] \) y \( x_2[k] = y[k+1] \).
+   Definimos $x_1[k] = y[k]$ y $x_2[k] = y[k+1]$.
    
 2. **Ecuaciones en términos de los estados**:
    $$
@@ -341,16 +341,16 @@ $$
 y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \mathbf{X}(k)
 $$
 
-Encuentra la función de transferencia \( G(s) = \frac{Y(s)}{U(s)} \) del sistema.
+Encuentra la función de transferencia $G(s) = \frac{Y(s)}{U(s)}$ del sistema.
 
 **Solución**:
 
-1. **Calcular \( sI - A \)**:
+1. **Calcular $sI - A$:
    $$
    sI - A = \begin{bmatrix} s & -1 \\ 2 & s+3 \end{bmatrix}
    $$
 
-2. **Calcular la inversa de \( sI - A \)**:
+2. **Calcular la inversa de $sI - A$:
    
    $$
    (sI - A)^{-1} = \frac{1}{s^2 + 3s + 2} \begin{bmatrix} s + 3 & 1 \\ -2 & s \end{bmatrix}
@@ -381,12 +381,12 @@ Encuentra los polos del sistema en espacio de estados.
 **Solución**:
 
 1. **Formar la ecuación característica**:
-   Los polos se encuentran resolviendo el determinante de \( sI - A = 0 \).
+   Los polos se encuentran resolviendo el determinante de $sI - A = 0$.
    $$
    sI - A = \begin{bmatrix} s & -1 \\ 4 & s+5 \end{bmatrix}
    $$
 
-2. **Calcular el determinante de \( sI - A \)**:
+2. **Calcular el determinante de $sI - A$:
    $$
    \det(sI - A) = (s)(s + 5) - (-1)(4) = s^2 + 5s + 4
    $$
@@ -401,41 +401,41 @@ Encuentra los polos del sistema en espacio de estados.
    s = -4 \quad \text{y} \quad s = -1
    $$
 
-**Conclusión**: Los polos del sistema son \( s = -4 \) y \( s = -1 \).
+**Conclusión**: Los polos del sistema son $s = -4$ y $s = -1$.
 
 ---
 
 ### 📚 Ejercicio 5
 
-**Enunciado**: Dado un proceso de nivel de tanque que se comporta como un proceso integrante, los tiempos registrados fueron: \( T_1 = 5 \) s y \( T_2 = 10 \) s. La salida \( O_1 \) y \( O_2 \) corresponde a 2 m y 3 m, respectivamente, y las entradas \( I_1 = 0.5 \) L/s y \( I_2 = 1 \) L/s. Calcula el valor de la ganancia de integración \( K_m \) y el tiempo muerto \( \tau_m \) del sistema.
+**Enunciado**: Dado un proceso de nivel de tanque que se comporta como un proceso integrante, los tiempos registrados fueron: $T_1 = 5$ s y $T_2 = 10$ s. La salida $O_1$ y $O_2$ corresponde a 2 m y 3 m, respectivamente, y las entradas $I_1 = 0.5$ L/s y $I_2 = 1$ L/s. Calcula el valor de la ganancia de integración $K_m$ y el tiempo muerto $\tau_m$ del sistema.
 
 **Solución**:
 
-1. **Cálculo de \( K_m \)**:
+1. **Cálculo de $K_m$:
    $$
    K_m = \frac{O_2 - O_1}{(I_2 - I_1) \cdot (T_3 - T_2)}
    $$
-   Dado que \( O_2 = 3 \) m, \( O_1 = 2 \) m, \( I_2 = 1 \) L/s, \( I_1 = 0.5 \) L/s, y \( T_3 - T_2 = 5 \):
+   Dado que $O_2 = 3$ m, $O_1 = 2$ m, $I_2 = 1$ L/s, $I_1 = 0.5$ L/s, y $T_3 - T_2 = 5$:
    $$
    K_m = \frac{3 - 2}{(1 - 0.5) \cdot (10 - 5)} = \frac{1}{0.5 \cdot 5} = \frac{1}{2.5} = 0.4 \, \text{m/L}
    $$
 
-2. **Cálculo de \( \tau_m \)**:
+2. **Cálculo de $\tau_m$:
    $$
    \tau_m = T_2 - T_1 = 10 - 5 = 5 \, \text{s}
    $$
 
-**Conclusión**: La ganancia de integración \( K_m \) es 0.4 m/L y el tiempo muerto \( \tau_m \) es 5 s.
+**Conclusión**: La ganancia de integración $K_m$ es 0.4 m/L y el tiempo muerto $\tau_m$ es 5 s.
 
 ---
 
 ### 📚 Ejercicio 6
 
-**Enunciado**: Un proceso integrante tiene los siguientes valores: \( T_1 = 2 \) s, \( T_2 = 6 \) s, \( O_1 = 1.5 \) m, \( O_2 = 4 \) m, \( I_1 = 0.3 \) L/s y \( I_2 = 0.8 \) L/s. Determina el valor de \( K_m \) y \( \tau_m \).
+**Enunciado**: Un proceso integrante tiene los siguientes valores: $T_1 = 2$ s, $T_2 = 6$ s, $O_1 = 1.5$ m, $O_2 = 4$ m, $I_1 = 0.3$ L/s y $I_2 = 0.8$ L/s. Determina el valor de $K_m$ y $\tau_m$.
 
 **Solución**:
 
-1. **Cálculo de \( K_m \)**:
+1. **Cálculo de $K_m$:
    $$
    K_m = \frac{O_2 - O_1}{(I_2 - I_1) \cdot (T_3 - T_2)}
    $$
@@ -444,12 +444,12 @@ Encuentra los polos del sistema en espacio de estados.
    K_m = \frac{4 - 1.5}{(0.8 - 0.3) \cdot (6 - 2)} = \frac{2.5}{0.5 \cdot 4} = \frac{2.5}{2} = 1.25 \, \text{m/L}
    $$
 
-2. **Cálculo de \( \tau_m \)**:
+2. **Cálculo de $\tau_m$:
    $$
    \tau_m = T_2 - T_1 = 6 - 2 = 4 \, \text{s}
    $$
 
-**Conclusión**: La ganancia de integración \( K_m \) es 1.25 m/L y el tiempo muerto \( \tau_m \) es 4 s.
+**Conclusión**: La ganancia de integración $K_m$ es 1.25 m/L y el tiempo muerto $\tau_m$ es 4 s.
 
 ---
 
