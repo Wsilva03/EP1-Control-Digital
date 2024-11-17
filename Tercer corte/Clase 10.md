@@ -81,6 +81,7 @@ Diseña una ley de control para un sistema cuya matriz $A$ tiene polos en $z = -
 ### Conceptos
 - Se introduce una nueva variable de estado $v(k)$ para compensar la referencia y asegurar seguimiento.
 - Ecuación de estado ampliada:
+- 
   $$
   \begin{bmatrix} 
   x(k+1) \\
