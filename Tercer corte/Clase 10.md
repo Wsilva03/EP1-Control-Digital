@@ -102,18 +102,42 @@ v(k)
 $$
 
 #### Ejercicio 1
-Para el sistema con $A = \begin{bmatrix} 0.5 & 0.1 \\ -0.2 & 0.7 \end{bmatrix}$, $B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$, y $C = \begin{bmatrix} 1 & 0 \end{bmatrix}$, define el sistema ampliado y escribe sus ecuaciones de estado.
+Para el sistema con $A = \begin{bmatrix}
+0.5 & 0.1 \\ 
+-0.2 & 0.7
+\end{bmatrix}$, $B = \begin{bmatrix}
+0 \\ 
+1
+\end{bmatrix}$, y $C = \begin{bmatrix}
+1 & 0
+\end{bmatrix}$, define el sistema ampliado y escribe sus ecuaciones de estado.
 
 **Solución**:
 - Expresamos las matrices ampliadas:
   $$
-  A_a = \begin{bmatrix} 0.5 & 0.1 & 0 \\ -0.2 & 0.7 & 0 \\ -1 & 0 & 1 \end{bmatrix}, \quad B_a = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
+  A_a = \begin{bmatrix}
+0.5 & 0.1 & 0 \\ 
+-0.2 & 0.7 & 0 \\ 
+-1 & 0 & 1
+\end{bmatrix}, \quad B_a = \begin{bmatrix}
+0 \\ 
+1 \\ 
+0
+\end{bmatrix}
   $$
 
 | Matriz Ampliada | Valores |
 |-----------------|---------|
-| $A_a$ | $\begin{bmatrix} 0.5 & 0.1 & 0 \\ -0.2 & 0.7 & 0 \\ -1 & 0 & 1 \end{bmatrix}$ |
-| $B_a$ | $\begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}$ |
+| $A_a$ | $\begin{bmatrix}
+0.5 & 0.1 & 0 \\ 
+-0.2 & 0.7 & 0 \\ 
+-1 & 0 & 1
+\end{bmatrix}$ |
+| $B_a$ | $\begin{bmatrix}
+0 \\ 
+1 \\ 
+0
+\end{bmatrix}$ |
 
 #### Ejercicio 2
 Implementa el esquema de control integral para un sistema en Simulink y comprueba que el error de estado estacionario es cero para una entrada escalón.
@@ -144,18 +168,32 @@ Cuando no todos los estados del sistema son medibles, los observadores estiman l
 
 
 #### Ejercicio 1
-Comprueba la observabilidad de un sistema con $A = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}$ y $C = \begin{bmatrix} 1 & 0 \end{bmatrix}$. ¿Es posible diseñar un observador de estados?
+Comprueba la observabilidad de un sistema con $A = \begin{bmatrix}
+1 & 2 \\ 
+0 & 1
+\end{bmatrix}$ y $C = \begin{bmatrix}
+1 & 0
+\end{bmatrix}$. ¿Es posible diseñar un observador de estados?
 
 **Solución**:
 1. Calcular la matriz de observabilidad:
    $$
-   O = \begin{bmatrix} C \\ CA \end{bmatrix} = \begin{bmatrix} 1 & 0 \\ 1 & 2 \end{bmatrix}
+   O = \begin{bmatrix}
+C \\ 
+CA
+\end{bmatrix} = \begin{bmatrix}
+1 & 0 \\ 
+1 & 2
+\end{bmatrix}
    $$
 2. Determinar si $O$ es de rango completo (tiene rango igual a 2). El sistema es observable.
 
 | Matriz de Observabilidad | Valor |
 |--------------------------|-------|
-| $O$ | $\begin{bmatrix} 1 & 0 \\ 1 & 2 \end{bmatrix}$ |
+| $O$ | $\begin{bmatrix}
+1 & 0 \\ 
+1 & 2
+\end{bmatrix}$ |
 
 #### Ejercicio 2
 Calcula la matriz de ganancias $K_p$ para un observador de estados en un sistema con polos deseados en $z = -0.5$.
@@ -181,7 +219,13 @@ Calcula la matriz de ganancias $K_p$ para un observador de estados en un sistema
   $$
 
 #### Ejercicio 1
-Diseña un observador para el sistema con $A = \begin{bmatrix} 1.2 & 0 \\ 1 & 1 \end{bmatrix}$, $B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$, y polos del observador en $z = -0.3$.
+Diseña un observador para el sistema con $A = \begin{bmatrix}
+1.2 & 0 \\ 
+1 & 1
+\end{bmatrix}$, $B = \begin{bmatrix}
+0 \\ 
+1
+\end{bmatrix}$, y polos del observador en $z = -0.3$.
 
 **Solución**:
 1. Comprobamos la observabilidad del sistema.
@@ -189,7 +233,10 @@ Diseña un observador para el sistema con $A = \begin{bmatrix} 1.2 & 0 \\ 1 & 1 
 
 | Parámetro | Valor |
 |-----------|-------|
-| Matriz $A$ | $\begin{bmatrix} 1.2 & 0 \\ 1 & 1 \end{bmatrix}$ |
+| Matriz $A$ | $\begin{bmatrix}
+1.2 & 0 \\ 
+1 & 1
+\end{bmatrix}$ |
 | Polos deseados | $z = -0.3$ |
 | $K_p$ | Calculado |
 
