@@ -1,5 +1,4 @@
-```markdown
-# Apuntes: Análisis de Polinomios y Controladores
+# Apuntes: Parcial
 
 ## 1. Localización de Polos y Multiplicación de Polinomios
 
@@ -17,9 +16,12 @@ $-1$, $Z+2$, $Z+100$.
 
 **Desarrollo:**  
 1. Multiplicamos los dos primeros polos:  
-   $$   (Z+2)(Z+100) = Z^2 + 102Z + 200$$
-2. Combinamos con el tercer polo:  
-   $$   (Z^2 + 102Z + 200)(Z+1) = Z^3 + 103Z^2 + 302Z + 200$$
+
+   $$(Z+2)(Z+100) = Z^2 + 102Z + 200$$
+  
+4. Combinamos con el tercer polo:  
+
+   $$(Z^2 + 102Z + 200)(Z+1) = Z^3 + 103Z^2 + 302Z + 200$$
 
 ### Ejemplo 2 Resuelto:
 **Polos:**  
@@ -27,7 +29,8 @@ $Z+2.73j$, $Z-2.73j$.
 
 **Desarrollo:**  
 1. Aplicamos la fórmula del producto de binomios conjugados:  
-   $$   (Z+2.73j)(Z-2.73j) = Z^2 - (2.73)^2 = Z^2 - 7.45$$
+
+   $$(Z+2.73j)(Z-2.73j) = Z^2 - (2.73)^2 = Z^2 - 7.45$$
 
 ---
 
@@ -35,8 +38,8 @@ $Z+2.73j$, $Z-2.73j$.
 
 ### Concepto:
 El controlador en lazo cerrado se diseña usando la fórmula:
-$$C(Z) = \frac{\text{Modelo deseado en lazo cerrado}}{\text{Modelo en lazo abierto}} \cdot \left( 1 - \text{Modelo deseado en lazo cerrado} \right)
-\]
+
+$$C(Z) = \frac{\text{Modelo deseado en lazo cerrado}}{\text{Modelo en lazo abierto}} \cdot \left( 1 - \text{Modelo deseado en lazo cerrado} \right)$$
 
 ### Pasos:
 1. Determinar el polinomio característico del sistema en lazo cerrado.
@@ -50,9 +53,12 @@ $$C(Z) = \frac{\text{Modelo deseado en lazo cerrado}}{\text{Modelo en lazo abier
 
 **Desarrollo:**  
 1. Sustituimos en la fórmula:  
-   $$   C(Z) = \frac{Z^3 + 4Z^2 + 6Z + 4}{(Z^2 + 2Z + 1)(1 - (Z^3 + 4Z^2 + 6Z + 4))}$$
-2. Simplificamos:
-   $$   C(Z) = \frac{Z^3 + 4Z^2 + 6Z + 4}{Z^5 + 6Z^4 + 12Z^3 + \dots}$$
+
+   $$C(Z) = \frac{Z^3 + 4Z^2 + 6Z + 4}{(Z^2 + 2Z + 1)(1 - (Z^3 + 4Z^2 + 6Z + 4))}$$
+  
+4. Simplificamos:
+
+   $$C(Z) = \frac{Z^3 + 4Z^2 + 6Z + 4}{Z^5 + 6Z^4 + 12Z^3 + \dots}$$
 
 ### Ejemplo 2 Resuelto:
 **Dado:**  
@@ -61,9 +67,12 @@ $$C(Z) = \frac{\text{Modelo deseado en lazo cerrado}}{\text{Modelo en lazo abier
 
 **Desarrollo:**  
 1. Sustituimos en la fórmula:  
-   $$   C(Z) = \frac{Z+1}{(Z^2 + 5Z + 6)(1 - (Z+1))}$$
-2. Simplificamos:  
-   $$   C(Z) = \frac{Z^2 + 5Z + 5}{Z+1}$$
+
+   $$C(Z) = \frac{Z+1}{(Z^2 + 5Z + 6)(1 - (Z+1))}$$
+  
+4. Simplificamos:  
+
+   $$C(Z) = \frac{Z^2 + 5Z + 5}{Z+1}$$
 
 ---
 
@@ -82,8 +91,10 @@ $$C(Z) = \frac{\text{Modelo deseado en lazo cerrado}}{\text{Modelo en lazo abier
 
 **Cálculos:**  
 1. **Margen de fase:**  
-   $$   -150^\circ - (-180^\circ) = 30^\circ$$
-2. **Margen de ganancia:**  
+
+   $$-150^\circ - (-180^\circ) = 30^\circ$$
+3. **Margen de ganancia:**  
+
    $$   0 \, \text{dB} - (-5 \, \text{dB}) = 5 \, \text{dB}$$
 
 ### Ejemplo 2 Resuelto:
@@ -93,8 +104,11 @@ $$C(Z) = \frac{\text{Modelo deseado en lazo cerrado}}{\text{Modelo en lazo abier
 
 **Cálculos:**  
 1. **Margen de fase:**  
-   $$   -170^\circ - (-180^\circ) = 10^\circ$$
-2. **Margen de ganancia:**  
-   $$   0 \, \text{dB} - (-2 \, \text{dB}) = 2 \, \text{dB}$$
+
+   $$-170^\circ - (-180^\circ) = 10^\circ$$
+   
+3. **Margen de ganancia:**  
+
+   $$0 \, \text{dB} - (-2 \, \text{dB}) = 2 \, \text{dB}$$
 
 ---
