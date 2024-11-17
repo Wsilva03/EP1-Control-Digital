@@ -51,17 +51,17 @@ Para este sistema, calculamos $K$ y $F$ mediante la asignación de polos deseada
 1. Calcular los valores de $K$:
     - Asumimos una matriz de polos deseados y resolvemos para $K$ usando la función de asignación de polos.
 
-$A =
+$$A =
 \begin{bmatrix}  
 0 & 1 \\
 -2 & -3
-\end{bmatrix}$
+\end{bmatrix}$$
 
-$B =
+$$B =
 \begin{bmatrix}
 0 \\
 1 
-\end{bmatrix}$
+\end{bmatrix}$$
 
 K= Calculado
 
