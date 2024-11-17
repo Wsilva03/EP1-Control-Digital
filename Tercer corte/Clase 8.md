@@ -349,9 +349,7 @@ $$
 \begin{bmatrix}
 x_1(k+1) \\ 
 x_2(k+1)
-\end{bmatrix}
-=
-\begin{bmatrix}
+\end{bmatrix} = \begin{bmatrix}
 0.8 & 1 \\ 
 0 & 0.3
 \end{bmatrix}
