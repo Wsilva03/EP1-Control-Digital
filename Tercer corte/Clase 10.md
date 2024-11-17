@@ -51,12 +51,10 @@ Para este sistema, calculamos $K$ y $F$ mediante la asignación de polos deseada
 1. Calcular los valores de $K$:
     - Asumimos una matriz de polos deseados y resolvemos para $K$ usando la función de asignación de polos.
 
-| Matriz | Valores |
-|---|---|
-| A | $ \begin{bmatrix}  0 & 1  \\  -2 & -3  \end{bmatrix} $ |
-| B | $ \begin{bmatrix} 0 \\ 1 \end{bmatrix} $ |
-| K | Calculado |
-| F | Calculado |
+$A= \begin{bmatrix}  0 & 1  \\  -2 & -3  \end{bmatrix}$ 
+$B= \begin{bmatrix} 0 \\ 1 \end{bmatrix} $ 
+K= Calculado
+F= Calculado
 
 #### Ejercicio 2
 Diseña una ley de control para un sistema cuya matriz $A$ tiene polos en $z = -0.5$ y $z = -1$, logrando que el error de estado estacionario sea cero cuando $r(t) = 1$.
