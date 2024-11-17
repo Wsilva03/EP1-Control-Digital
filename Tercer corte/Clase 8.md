@@ -347,21 +347,21 @@ Convierte esta función de transferencia a espacio de estados en forma canónica
    
 $$
 \begin{bmatrix}
-x_1(k+1) \\
+x_1(k+1) \\ 
 x_2(k+1)
 \end{bmatrix}
 =
 \begin{bmatrix}
-0.8 & 1 \\
+0.8 & 1 \\ 
 0 & 0.3
 \end{bmatrix}
 \begin{bmatrix}
-x_1(k) \\
+x_1(k) \\ 
 x_2(k)
 \end{bmatrix}
 +
 \begin{bmatrix}
-0 \\
+0 \\ 
 1
 \end{bmatrix}
 u(k)
@@ -372,7 +372,7 @@ y(k) = \begin{bmatrix}
 1 & 0
 \end{bmatrix}
 \begin{bmatrix}
-x_1(k) \\
+x_1(k) \\ 
 x_2(k)
 \end{bmatrix}
 $$
@@ -380,10 +380,18 @@ $$
 **Conclusión**: La representación en espacio de estados en forma canónica observable es:
 
 $$
-\mathbf{X}(k+1) = \begin{bmatrix} -2 & 1 \\ 0 & -3 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 1 \\ 0 \end{bmatrix} u(k)
+\mathbf{X}(k+1) = \begin{bmatrix} 
+-2 & 1 \\
+ 0 & -3 
+ \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 
+ 1 \\
+ 0 
+ \end{bmatrix} u(k)
 $$
 $$
-y(k) = \begin{bmatrix} 2 & 0 \end{bmatrix} \mathbf{X}(k)
+y(k) = \begin{bmatrix} 
+2 & 0 
+\end{bmatrix} \mathbf{X}(k)
 $$
 
 ---
@@ -451,7 +459,13 @@ $$
 **Enunciado**: Dado el sistema de matrices:
 
 $$
-A = \begin{bmatrix} 0 & 1 \\ -4 & -5 \end{bmatrix}, \quad B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad C = \begin{bmatrix} 1 & 0 \end{bmatrix}, \quad D = \begin{bmatrix} 0 \end{bmatrix}
+A = \begin{bmatrix} 0 & 1 \\ -4 & -5 \end{bmatrix}, \quad B = \begin{bmatrix} 0 \\
+ 1 
+ \end{bmatrix}, \quad C = \begin{bmatrix} 
+ 1 & 0 
+ \end{bmatrix}, \quad D = \begin{bmatrix} 
+ 0 
+ \end{bmatrix}
 $$
 
 Encuentra los polos del sistema en espacio de estados.
