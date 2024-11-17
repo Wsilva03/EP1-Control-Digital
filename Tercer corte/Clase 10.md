@@ -53,9 +53,11 @@ Para este sistema, calculamos $K$ y $F$ mediante la asignación de polos deseada
 
 2. Determinar $F$ para compensar la referencia:
     - Usamos $F = -1 / (C (A - BK)^{-1} B)$ donde 
-$C = \begin{bmatrix} 
+$
+C = \begin{bmatrix} 
 1 & 0 
-\end{bmatrix}$
+\end{bmatrix}
+$
 
 | Matriz | Valores |
 |--------|---------|
