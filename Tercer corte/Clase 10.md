@@ -43,8 +43,6 @@ B = \begin{bmatrix}
 \end{bmatrix}
 $$
 
-
-
 encuentra los valores de $K$ y $F$ para eliminar el error de estado estacionario con una entrada de referencia constante.
 
 **Solución**:
@@ -54,7 +52,10 @@ Para este sistema, calculamos $K$ y $F$ mediante la asignación de polos deseada
     - Asumimos una matriz de polos deseados y resolvemos para $K$ usando la función de asignación de polos.
 
 2. Determinar $F$ para compensar la referencia:
-    - Usamos $F = -1 / (C (A - BK)^{-1} B)$ donde $C = \begin{bmatrix} 1 & 0 \end{bmatrix}$.
+    - Usamos $F = -1 / (C (A - BK)^{-1} B)$ donde 
+$C = \begin{bmatrix} 
+1 & 0 
+\end{bmatrix}$
 
 | Matriz | Valores |
 |--------|---------|
