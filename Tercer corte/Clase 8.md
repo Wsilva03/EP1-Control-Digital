@@ -134,7 +134,19 @@ $$
 
 Cuando los polos de la función de transferencia son diferentes, se puede representar en forma canónica diagonal, como sigue:
 
-$$\mathbf{X}(k+1) = \begin{bmatrix} P_1 & 0 & \dots & 0 \\ 0 & P_2 & \dots & 0 \\ \vdots & \vdots & \ddots & \vdots \\ 0 & 0 & \dots & P_n \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 1 \\ 1 \\ \vdots \\ 1 \end{bmatrix} u(k)$$
+$$\mathbf{X}(k+1) = \begin{bmatrix}
+P_1 & 0 & \dots & 0 \\
+0 & P_2 & \dots & 0 \\
+\vdots & \vdots & \ddots & \vdots \\
+0 & 0 & \dots & P_n
+\end{bmatrix}
+\mathbf{X}(k) +
+\begin{bmatrix}
+1 \\
+1 \\
+\vdots \\
+1
+\end{bmatrix} u(k)$$
 
 $$y(k) = \begin{bmatrix} c_1 & c_2 & \dots & c_n \end{bmatrix} \mathbf{X}(k)$$
 
