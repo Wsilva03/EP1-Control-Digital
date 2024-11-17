@@ -31,9 +31,13 @@ donde $K$ es el vector de ganancias y $F$ compensa la referencia.
 
 Dado un sistema con 
 
-$$A = \begin{bmatrix} 0 & 1 \\ -2 & -3 \end{bmatrix} \quad$$ 
+$A = \begin{bmatrix} 0 & 1 \\ -2 & -3 \end{bmatrix} \quad$ 
+
 y 
-$$\quad B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$ 
+
+$\quad B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
+
+
 encuentra los valores de $K$ y $F$ para eliminar el error de estado estacionario con una entrada de referencia constante.
 
 **Solución**:
