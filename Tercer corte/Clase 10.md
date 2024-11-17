@@ -51,18 +51,10 @@ Para este sistema, calculamos $K$ y $F$ mediante la asignación de polos deseada
 1. Calcular los valores de $K$:
     - Asumimos una matriz de polos deseados y resolvemos para $K$ usando la función de asignación de polos.
 
-2. Determinar F para compensar la referencia:
-
-* Usamos F = -1/(C(A - BK)^-1)B donde C = [1 0]
-
 | Matriz | Valores |
 |---|---|
-| A | 
-|   | [0 1]
-|   | [-2 -3] |
-| B |
-|   | [0]
-|   | [1] |
+| A | $\begin{bmatrix} 0 & 1 \\ -2 & -3 \end{bmatrix}$ |
+| B | $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ |
 | K | Calculado |
 | F | Calculado |
 
