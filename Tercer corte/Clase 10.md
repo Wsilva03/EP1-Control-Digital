@@ -34,7 +34,9 @@ Dado un sistema con:
 $A = \begin{bmatrix}
 0 & 1 \\
 -2 & -3 
-\end{bmatrix}$ y $B = \begin{bmatrix} 
+\end{bmatrix}$ 
+y 
+$B = \begin{bmatrix} 
 0 \\
  1 
  \end{bmatrix}$
