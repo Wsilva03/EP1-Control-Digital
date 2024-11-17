@@ -259,56 +259,58 @@ Obtén la representación en espacio de estados en la forma canónica controlabl
    Definimos $x_1[k] = y[k]$ y $x_2[k] = y[k+1]$.
    
 2. **Ecuaciones en términos de los estados**:
-   $$
-   x_1[k+1] = x_2[k]
-   $$
-   $$
-   x_2[k+1] = -0.3x_2[k] + u[k]
-   $$
 
-3. **Escribir el sistema en forma matricial**: 
+   $$x_1[k+1] = x_2[k]$$
+
+   $$x_2[k+1] = -0.3x_2[k] + u[k]$$
+  
+3. **Escribir el sistema en forma matricial**:
    
-    $$
-    \begin{bmatrix}
-    x_1(k+1) \\
-    x_2(k+1)
-    \end{bmatrix}
-    =
-    \begin{bmatrix}
-    0 & 1 \\
-    0 & -0.3
-    \end{bmatrix}
-    \begin{bmatrix}
-    x_1(k) \\
-    x_2(k)
-    \end{bmatrix}
-    +
-    \begin{bmatrix}
-    0 \\
-    1
-    \end{bmatrix}
-    u(k)
-    $$
-
-    La salida es:
-
-    $$
-    y(k) = \begin{bmatrix}
-    1 & 0
-    \end{bmatrix}
-    \begin{bmatrix}
-    x_1(k) \\
-    x_2(k)
-    \end{bmatrix}
-    $$
+   $$
+   \begin{bmatrix}
+   x_1(k+1) \\ 
+   x_2(k+1)
+   \end{bmatrix} =
+   \begin{bmatrix}
+   0 & 1 \\
+   0 & -0.3
+   \end{bmatrix} 
+   \begin{bmatrix}
+   x_1(k) \\
+   x_2(k)
+   \end{bmatrix} +
+   \begin{bmatrix}
+   0 \\
+   1
+   \end{bmatrix} u(k)
+   $$
+   
+   La salida es:
+   
+   $$
+   y(k) = 
+   \begin{bmatrix}
+   1 & 0
+   \end{bmatrix}
+   \begin{bmatrix}
+   x_1(k) \\
+   x_2(k)
+   \end{bmatrix}
+   $$
 
 **Conclusión**: La representación en espacio de estados en forma canónica controlable es:
 
 $$
-\mathbf{X}(k+1) = \begin{bmatrix} 0 & 1 \\ 0 & -0.3 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 0 \\ 1 \end{bmatrix} u(k)
+\mathbf{X}(k+1) = 
+\begin{bmatrix} 0 & 1 \\
+0 & -0.3 
+\end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 
+0 \\ 1 \end{bmatrix} u(k)
 $$
 $$
-y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \mathbf{X}(k)
+y(k) = \begin{bmatrix}
+1 & 0
+\end{bmatrix} \mathbf{X}(k)
 $$
 
 ---
@@ -391,10 +393,18 @@ $$
 **Enunciado**: Dado el sistema en espacio de estados:
 
 $$
-\mathbf{X}(k+1) = \begin{bmatrix} 0 & 1 \\ -2 & -3 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 0 \\ 1 \end{bmatrix} u(k)
+\mathbf{X}(k+1) = \begin{bmatrix} 
+0 & 1 \\ 
+-2 & -3 
+\end{bmatrix} \mathbf{X}(k) + 
+\begin{bmatrix} 0 \\ 
+1 
+\end{bmatrix} u(k)
 $$
 $$
-y(k) = \begin{bmatrix} 1 & 0 \end{bmatrix} \mathbf{X}(k)
+y(k) = \begin{bmatrix} 
+1 & 0 
+\end{bmatrix} \mathbf{X}(k)
 $$
 
 Encuentra la función de transferencia $G(s) = \frac{Y(s)}{U(s)}$ del sistema.
@@ -403,18 +413,30 @@ Encuentra la función de transferencia $G(s) = \frac{Y(s)}{U(s)}$ del sistema.
 
 1. **Calcular $sI - A$:
    $$
-   sI - A = \begin{bmatrix} s & -1 \\ 2 & s+3 \end{bmatrix}
+   sI - A = \begin{bmatrix} 
+   s & -1 \\
+   2 & s+3 
+   \end{bmatrix}
    $$
 
 2. **Calcular la inversa de $sI - A$:
    
    $$
-   (sI - A)^{-1} = \frac{1}{s^2 + 3s + 2} \begin{bmatrix} s + 3 & 1 \\ -2 & s \end{bmatrix}
+   (sI - A)^{-1} = \frac{1}{s^2 + 3s + 2} \begin{bmatrix} 
+   s + 3 & 1 \\
+   -2 & s \end{bmatrix}
    $$
 
 3. **Obtener la función de transferencia**:
    $$
-   G(s) = C(sI - A)^{-1}B + D = \begin{bmatrix} 1 & 0 \end{bmatrix} \frac{1}{s^2 + 3s + 2} \begin{bmatrix} s + 3 \\ -2 \end{bmatrix}
+   G(s) = C(sI - A)^{-1}B + D = 
+   \begin{bmatrix} 
+   1 & 0 
+   \end{bmatrix} 
+   \frac{1}{s^2 + 3s + 2} 
+   \begin{bmatrix} s + 3 \\
+   -2 
+   \end{bmatrix}
    $$
 
 **Conclusión**: La función de transferencia es:
@@ -439,7 +461,10 @@ Encuentra los polos del sistema en espacio de estados.
 1. **Formar la ecuación característica**:
    Los polos se encuentran resolviendo el determinante de $sI - A = 0$.
    $$
-   sI - A = \begin{bmatrix} s & -1 \\ 4 & s+5 \end{bmatrix}
+   sI - A = \begin{bmatrix} 
+   s & -1 \\
+   4 & s+5 
+   \end{bmatrix}
    $$
 
 2. **Calcular el determinante de $sI - A$:
