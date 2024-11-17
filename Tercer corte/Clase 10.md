@@ -31,17 +31,17 @@ donde $K$ es el vector de ganancias y $F$ compensa la referencia.
 
 Dado un sistema con:
 
-$$A = \begin{bmatrix}
+$$
+A = \begin{bmatrix}
 0 & 1 \\
 -2 & -3 
 \end{bmatrix}
-
  y  
-
 B = \begin{bmatrix} 
 0 \\
 1 
-\end{bmatrix}$$
+\end{bmatrix}
+$$
 
 
 
