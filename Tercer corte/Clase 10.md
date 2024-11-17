@@ -53,7 +53,10 @@ Para este sistema, calculamos $K$ y $F$ mediante la asignación de polos deseada
 
 | Matriz | Valores |
 |---|---|
-| A | $\begin{bmatrix} 0 & 1 \\ -2 & -3 \end{bmatrix}$ |
+| A | $\begin{bmatrix}
+0 & 1 \\
+-2 & -3
+\end{bmatrix}$ |
 | B | $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ |
 | K | Calculado |
 | F | Calculado |
