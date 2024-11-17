@@ -88,7 +88,17 @@ Esta función se puede representar en distintas formas canónicas dentro del esp
 
 Para una función de transferencia $G(z)$, la forma canónica controlable se define mediante la siguiente estructura matricial:
 
-$$\mathbf{X}(k+1) = \begin{bmatrix} 0 & 1 & 0 & \dots & 0 \\ 0 & 0 & 1 & \dots & 0 \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ -a_n & -a_{n-1} & -a_{n-2} & \dots & -a_1 \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 0 \\ 0 \\ \vdots \\ 1 \end{bmatrix} u(k)$$
+$$\mathbf{X}(k+1) = \begin{bmatrix} 
+0 & 1 & 0 & \dots & 0 \\
+ 0 & 0 & 1 & \dots & 0 \\
+  \vdots & \vdots & \vdots & \ddots & \vdots \\
+   -a_n & -a_{n-1} & -a_{n-2} & \dots & -a_1 
+   \end{bmatrix} \mathbf{X}(k) + \begin{bmatrix} 
+   0 \\
+   0 \\
+   \vdots \\
+   1 
+   \end{bmatrix} u(k)$$
 
 $$y(k) = \begin{bmatrix} b_n & b_{n-1} & \dots & b_1 \end{bmatrix} \mathbf{X}(k)$$
 
