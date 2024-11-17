@@ -336,45 +336,14 @@ Convierte esta función de transferencia a espacio de estados en forma canónica
    
    Usamos las siguientes ecuaciones en la forma canónica observable:
    
-   $$
-   x_1[k+1] = -2x_1[k] + x_2[k] + u[k]
-   $$
-   $$
-   x_2[k+1] = -3x_1[k] + u[k]
-   $$
-
-3. **Escribir el sistema en forma matricial**:
+   $$ x_1[k+1] = -2x_1[k] + x_2[k] + u[k] $$
    
-$$
-\begin{bmatrix}
-x_1(k+1) \\ 
-x_2(k+1)
-\end{bmatrix} = \begin{bmatrix}
-0.8 & 1 \\ 
-0 & 0.3
-\end{bmatrix}
-\begin{bmatrix}
-x_1(k) \\ 
-x_2(k)
-\end{bmatrix}
-+
-\begin{bmatrix}
-0 \\ 
-1
-\end{bmatrix}
-u(k)
-$$
-La salida es: 
-$$
-y(k) = \begin{bmatrix}
-1 & 0
-\end{bmatrix}
-\begin{bmatrix}
-x_1(k) \\ 
-x_2(k)
-\end{bmatrix}
-$$
+   $$ x_2[k+1] = -3x_1[k] + u[k] $$
 
+4. **Escribir el sistema en forma matricial**:
+
+![Figura de prueba](Imagenes/imagen_2024-11-17_122806796.png)
+ 
 **Conclusión**: La representación en espacio de estados en forma canónica observable es:
 
 $$
@@ -417,7 +386,8 @@ Encuentra la función de transferencia $G(s) = \frac{Y(s)}{U(s)}$ del sistema.
 
 **Solución**:
 
-1. **Calcular $sI - A$:
+1. **Calcular $sI - A$**:
+   
    $$
    sI - A = \begin{bmatrix} 
    s & -1 \\
@@ -425,15 +395,17 @@ Encuentra la función de transferencia $G(s) = \frac{Y(s)}{U(s)}$ del sistema.
    \end{bmatrix}
    $$
 
-2. **Calcular la inversa de $sI - A$:
+3. **Calcular la inversa de $sI - A$**:
    
    $$
    (sI - A)^{-1} = \frac{1}{s^2 + 3s + 2} \begin{bmatrix} 
    s + 3 & 1 \\
-   -2 & s \end{bmatrix}
+   -2 & s
+   \end{bmatrix}
    $$
 
-3. **Obtener la función de transferencia**:
+5. **Obtener la función de transferencia**:
+   
    $$
    G(s) = C(sI - A)^{-1}B + D = 
    \begin{bmatrix} 
@@ -446,6 +418,7 @@ Encuentra la función de transferencia $G(s) = \frac{Y(s)}{U(s)}$ del sistema.
    $$
 
 **Conclusión**: La función de transferencia es:
+
 $$
 G(s) = \frac{s + 3}{s^2 + 3s + 2}
 $$
@@ -457,13 +430,17 @@ $$
 **Enunciado**: Dado el sistema de matrices:
 
 $$
-A = \begin{bmatrix} 0 & 1 \\ -4 & -5 \end{bmatrix}, \quad B = \begin{bmatrix} 0 \\
- 1 
- \end{bmatrix}, \quad C = \begin{bmatrix} 
- 1 & 0 
- \end{bmatrix}, \quad D = \begin{bmatrix} 
- 0 
- \end{bmatrix}
+A = \begin{bmatrix} 
+0 & 1 \\
+-4 & -5 
+\end{bmatrix}, \quad B = \begin{bmatrix}
+0 \\
+1 
+\end{bmatrix}, \quad C = \begin{bmatrix} 
+1 & 0 
+\end{bmatrix}, \quad D = \begin{bmatrix} 
+0 
+\end{bmatrix}
 $$
 
 Encuentra los polos del sistema en espacio de estados.
@@ -472,6 +449,7 @@ Encuentra los polos del sistema en espacio de estados.
 
 1. **Formar la ecuación característica**:
    Los polos se encuentran resolviendo el determinante de $sI - A = 0$.
+
    $$
    sI - A = \begin{bmatrix} 
    s & -1 \\
@@ -479,17 +457,21 @@ Encuentra los polos del sistema en espacio de estados.
    \end{bmatrix}
    $$
 
-2. **Calcular el determinante de $sI - A$:
+3. **Calcular el determinante de $sI - A$**:
+
    $$
    \det(sI - A) = (s)(s + 5) - (-1)(4) = s^2 + 5s + 4
    $$
 
-3. **Resolver para los valores propios**:
+5. **Resolver para los valores propios**:
    Factorizamos la ecuación característica:
+
    $$
    s^2 + 5s + 4 = (s + 4)(s + 1) = 0
    $$
+
    Los valores propios, y por tanto los polos, son:
+
    $$
    s = -4 \quad \text{y} \quad s = -1
    $$
@@ -504,16 +486,20 @@ Encuentra los polos del sistema en espacio de estados.
 
 **Solución**:
 
-1. **Cálculo de $K_m$:
+1. **Cálculo de $K_m$**:
+
    $$
    K_m = \frac{O_2 - O_1}{(I_2 - I_1) \cdot (T_3 - T_2)}
    $$
+
    Dado que $O_2 = 3$ m, $O_1 = 2$ m, $I_2 = 1$ L/s, $I_1 = 0.5$ L/s, y $T_3 - T_2 = 5$:
+
    $$
    K_m = \frac{3 - 2}{(1 - 0.5) \cdot (10 - 5)} = \frac{1}{0.5 \cdot 5} = \frac{1}{2.5} = 0.4 \, \text{m/L}
    $$
 
-2. **Cálculo de $\tau_m$:
+3. **Cálculo de $\tau_m$**:
+
    $$
    \tau_m = T_2 - T_1 = 10 - 5 = 5 \, \text{s}
    $$
@@ -528,16 +514,19 @@ Encuentra los polos del sistema en espacio de estados.
 
 **Solución**:
 
-1. **Cálculo de $K_m$:
+1. **Cálculo de $K_m$**:
+
    $$
    K_m = \frac{O_2 - O_1}{(I_2 - I_1) \cdot (T_3 - T_2)}
    $$
    Sustituyendo los valores:
+
    $$
    K_m = \frac{4 - 1.5}{(0.8 - 0.3) \cdot (6 - 2)} = \frac{2.5}{0.5 \cdot 4} = \frac{2.5}{2} = 1.25 \, \text{m/L}
    $$
 
-2. **Cálculo de $\tau_m$:
+3. **Cálculo de $\tau_m$**:
+
    $$
    \tau_m = T_2 - T_1 = 6 - 2 = 4 \, \text{s}
    $$
