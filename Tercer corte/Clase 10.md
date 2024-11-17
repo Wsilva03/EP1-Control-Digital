@@ -29,7 +29,11 @@ donde $K$ es el vector de ganancias y $F$ compensa la referencia.
 
 #### Ejercicio 1
 
-Dado un sistema con <span class="math-inline">A \= \\begin\{bmatrix\} 0 & 1 \\\\ \-2 & \-3 \\end\{bmatrix\}</span> y <span class="math-inline">B \= \\begin\{bmatrix\} 0 \\\\ 1 \\end\{bmatrix\}</span>, encuentra los valores de K y F para eliminar el error de estado estacionario con una entrada de referencia constante.
+Dado un sistema con 
+$A = \begin{bmatrix} 0 & 1 \\ -2 & -3 \end{bmatrix}$ 
+y 
+$B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
+, encuentra los valores de $K$ y $F$ para eliminar el error de estado estacionario con una entrada de referencia constante.
 
 **Solución**:
 Para este sistema, calculamos $K$ y $F$ mediante la asignación de polos deseada. Supongamos polos en $-1$ y $-2$, y utilizamos la técnica de asignación de polos.
