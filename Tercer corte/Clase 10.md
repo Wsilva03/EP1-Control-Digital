@@ -82,7 +82,22 @@ Diseña una ley de control para un sistema cuya matriz $A$ tiene polos en $z = -
 - Se introduce una nueva variable de estado $v(k)$ para compensar la referencia y asegurar seguimiento.
 - Ecuación de estado ampliada:
   $$
-  \begin{bmatrix} x(k+1) \\ v(k+1) \end{bmatrix} = \begin{bmatrix} A & 0 \\ -C & 1 \end{bmatrix} \begin{bmatrix} x(k) \\ v(k) \end{bmatrix} + \begin{bmatrix} B \\ 0 \end{bmatrix} u(k) + \begin{bmatrix} 0 \\ 1 \end{bmatrix} r(k)
+  \begin{bmatrix} 
+  x(k+1) \\
+  v(k+1) 
+  \end{bmatrix} = 
+  \begin{bmatrix} A & 0 \\
+  -C & 1
+  \end{bmatrix}
+  \begin{bmatrix} x(k) \\
+  v(k)
+  \end{bmatrix} +
+  \begin{bmatrix} B \\
+  0
+  \end{bmatrix} u(k) +
+  \begin{bmatrix} 0 \\
+  1
+  \end{bmatrix} r(k)
   $$
 
 #### Ejercicio 1
