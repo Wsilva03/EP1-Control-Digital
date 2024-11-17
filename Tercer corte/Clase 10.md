@@ -3,18 +3,37 @@
 ## 1. Eliminación de Error de Estado Estacionario
 
 ### Conceptos
+
 - **Regulación**: Todos los estados tienen una referencia de valor cero.
 - **Servo**: Al menos uno de los estados tiene una referencia distinta de cero para ajustar la salida $y_{ss}$ a una entrada $r_{ss}$, logrando $e_{ss} = 0$.
 
+### Técnicas de Diseño
+
+1. **Desacoplamiento mediante retroalimentación:** Se utiliza retroalimentación para anular las interacciones entre variables.
+2. **Control Óptimo:** Minimiza una función de costo para garantizar un desempeño deseado.
+3. **Colocación de polos:** Se ajustan los polos del sistema controlado para lograr la dinámica deseada.
+
 ### Ley de Control
+
 Para lograr seguimiento integral, se propone la siguiente ley de control:
-$$
-u(k) = -Kx(k) + Fr(k)
-$$
+
+$$ u(k) = -Kx(k) + Fr(k) $$
+
 donde $K$ es el vector de ganancias y $F$ compensa la referencia.
 
+#### Tipos comunes de leyes de control:
+
+- Control de retroalimentación: Ajusta las entradas basándose en el error (diferencia entre salida deseada y real).
+- Control feedforward: Compensa perturbaciones conocidas sin depender del error.
+- Control en tiempo discreto: Diseñado para sistemas digitales, donde las actualizaciones ocurren en pasos discretos.
+
 #### Ejercicio 1
-Dado un sistema con $A = \begin{bmatrix} 0 & 1 \\ -2 & -3 \end{bmatrix}$ y $B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$, encuentra los valores de $K$ y $F$ para eliminar el error de estado estacionario con una entrada de referencia constante.
+
+Dado un sistema con 
+$A = \begin{bmatrix} 0 & 1 \\ -2 & -3 \end{bmatrix}$ 
+y 
+$B = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$
+, encuentra los valores de $K$ y $F$ para eliminar el error de estado estacionario con una entrada de referencia constante.
 
 **Solución**:
 Para este sistema, calculamos $K$ y $F$ mediante la asignación de polos deseada. Supongamos polos en $-1$ y $-2$, y utilizamos la técnica de asignación de polos.
@@ -83,6 +102,14 @@ Implementa el esquema de control integral para un sistema en Simulink y comprueb
   \hat{x}(k+1) = (A - K_pC)\hat{x}(k) + Bu + K_p y
   $$
 - Este observador es útil cuando el sistema es **observable**.
+
+Cuando no todos los estados del sistema son medibles, los observadores estiman los estados internos utilizando las entradas y salidas disponibles.
+
+### Tipos de Observadores
+1. **Luenberger:** Usa un modelo lineal para estimar estados con un error convergente a cero.
+2. **Extendido:** Maneja sistemas no lineales mediante una linealización local.
+3. **Kalman:** Combina mediciones con un modelo probabilístico para minimizar el error de estimación.
+
 
 #### Ejercicio 1
 Comprueba la observabilidad de un sistema con $A = \begin{bmatrix} 1 & 2 \\ 0 & 1 \end{bmatrix}$ y $C = \begin{bmatrix} 1 & 0 \end{bmatrix}$. ¿Es posible diseñar un observador de estados?
